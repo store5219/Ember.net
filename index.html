@@ -1,3 +1,48 @@
 <html>my name is gobie lemon daby baby and im from djfyfjfhdfhhg village in gobie lemon daby baby land
-    <img src="https://thecheesecellar.com/wp-content/uploads/2024/01/Lemon-Farm-Tour-1024x585.jpg"></img>
-</html>
+Here’s a complete, runnable HTML + CSS example that overlays two <img> elements on top of each other.
+This approach uses CSS positioning so you can control exactly how the images overlap.
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overlay Two Images</title>
+<style>
+  /* Container to hold both images */
+  .image-container {
+    position: relative; /* Needed for absolute positioning of children */
+    display: inline-block;
+  }
+
+  /* Base (background) image */
+  .image-container img.background {
+    display: block;
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+  }
+
+  /* Overlay (foreground) image */
+  .image-container img.overlay {
+    position: absolute;
+    top: 0;   /* Align to top of container */
+    left: 0;  /* Align to left of container */
+    width: 400px; /* Match background width */
+    height: auto;
+    opacity: 0.7; /* Make overlay semi-transparent */
+    pointer-events: none; /* Allow clicks to pass through if needed */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <!-- Background image -->
+  <img src="https://thecheesecellar.com/wp-content/uploads/2024/01/Lemon-Farm-Tour-1024x585.jpg"" alt="Background" class="background">
+  
+  <!-- Overlay image -->
+  <img src="https://thumbs.dreamstime.com/b/red-gummy-bear-wearing-black-sunglasses-glossy-classic-upright-sitting-posture-featuring-defined-limbs-small-383515685.jpg" alt="Overlay" class="overlay">
+</div>
+
+</body>
+    
+
+
